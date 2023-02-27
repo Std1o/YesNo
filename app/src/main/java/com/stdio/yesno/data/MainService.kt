@@ -1,11 +1,11 @@
 package com.stdio.yesno.data
 
-import com.stdio.yesno.domain.models.Bank
+import com.stdio.yesno.domain.models.AnswerResult
 import retrofit2.Response
-import retrofit2.http.POST
+import retrofit2.http.GET
 
 interface MainService {
 
-    @POST("bank/available")
-    suspend fun getAvailableBanks(): Response<List<Bank>>
+    @GET("api")
+    suspend fun getYesNoResult(): Response<AnswerResult>
 }

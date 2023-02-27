@@ -7,6 +7,6 @@ import javax.inject.Singleton
 @Singleton
 class MainRepository @Inject constructor(private val remoteDataSource: RemoteDataSource) : BaseRepository() {
 
-    suspend fun getAvailableBanks() =
-        flow { emit(apiCall { remoteDataSource.getAvailableBanks() }) }
+    suspend fun getYesNoResult() =
+        flow { emit(apiCall { remoteDataSource.getYesNoResult() }) }
 }

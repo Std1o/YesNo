@@ -20,7 +20,7 @@ import javax.inject.Singleton
 object AppModule {
 
     @Provides
-    fun providesBaseUrl(): String = "https://mb-ci.cifra.app/api/v1/"
+    fun providesBaseUrl(): String = "https://yesno.wtf/"
 
     @Provides
     fun getHttpLoggingInterceptor(): HttpLoggingInterceptor {

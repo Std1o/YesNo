@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">YesNo</string>
+    <string name="connect_bank_placeholder">%s connection not implemented yet</string>
+</resources>

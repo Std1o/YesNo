@@ -14,6 +14,7 @@ import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.stdio.yesno.R
 import com.stdio.yesno.common.showIf
+import com.stdio.yesno.common.showSnackbar
 import com.stdio.yesno.common.subscribeInUI
 import com.stdio.yesno.common.viewBinding
 import com.stdio.yesno.databinding.FragmentMainBinding
@@ -47,8 +48,12 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     private fun downloadImage(url: String?) {
+        if (url.isNullOrEmpty()) {
+            showSnackbar(R.string.no_url)
+            return
+        }
         val downloadManager = requireActivity().getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager?
-        val filename = url?.substring(url.lastIndexOf("/") + 1)
+        val filename = url.substring(url.lastIndexOf("/") + 1)
         val file =
             File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).path + "/gifs/" + filename)
         Log.d("Environment", "Environment extraData=" + file.getPath())

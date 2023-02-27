@@ -3,6 +3,7 @@
     <string name="text_result">Результат: %s</string>
     <string name="yes_no">Да/нет</string>
     <string name="force_answer">Определённый ответ</string>
+    <string name="no_url">Ссылка отсутствует</string>
     <array name="forced_answers">
         <item>yes</item>
         <item>no</item>

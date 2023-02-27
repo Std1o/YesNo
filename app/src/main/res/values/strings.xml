@@ -2,4 +2,10 @@
     <string name="app_name">YesNo</string>
     <string name="text_result">Результат: %s</string>
     <string name="yes_no">Да/нет</string>
+    <string name="force_answer">Определённый ответ</string>
+    <array name="forced_answers">
+        <item>yes</item>
+        <item>no</item>
+        <item>maybe</item>
+    </array>
 </resources>

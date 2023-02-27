@@ -19,4 +19,10 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
             launchRequest(repository.getYesNoResult())
         }
     }
+
+    fun getYesNoResult(force: String) {
+        viewModelScope.launch {
+            launchRequest(repository.getYesNoResult(force))
+        }
+    }
 }

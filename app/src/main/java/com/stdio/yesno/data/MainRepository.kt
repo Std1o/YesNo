@@ -9,4 +9,7 @@ class MainRepository @Inject constructor(private val remoteDataSource: RemoteDat
 
     suspend fun getYesNoResult() =
         flow { emit(apiCall { remoteDataSource.getYesNoResult() }) }
+
+    suspend fun getYesNoResult(force: String) =
+        flow { emit(apiCall { remoteDataSource.getYesNoResult(force) }) }
 }

@@ -31,6 +31,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             binding.textResult.text = getString(R.string.text_result, it.answer)
             Glide.with(requireContext())
                 .load(it.image)
+                .placeholder(R.drawable.progress_animation)
                 .into(binding.imageView)
         }
     }
